@@ -1,0 +1,13 @@
+version: '3'
+services:
+  app:
+    container_name: furlan
+    build: .
+    image: erickfc/furlan:latest
+    entrypoint: /bin/bash
+    volumes:
+      - /Users/Erick/Documents/workspace/test-furlan:/home/furlan
+    stdin_open: true
+    tty: true
+    ports:
+      - 8080:8080
